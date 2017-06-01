@@ -1,0 +1,9 @@
+dist
+coverage
+node_modules
+npm-debug.log
+.idea
+.DS_Store
+**/.DS_Store
+.env
+webpack/webpack-assets.json

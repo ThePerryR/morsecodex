@@ -1,0 +1,11 @@
+{
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "<rootDir>/src/components"
+    ],
+    "moduleDirectories": [
+      "../",
+      "node_modules"
+    ]
+  }
+}

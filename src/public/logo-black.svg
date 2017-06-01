@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="80px" viewBox="0 0 70 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-black</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo-black">
+            <polygon id="white-bg" fill="#FFFFFF" points="34.7826087 0 69.5652174 20.8695652 69.5652174 59.1304348 34.7826087 80 0 59.1304348 0 20.8695652"></polygon>
+            <polygon id="logo" fill="#3C3C3C" points="39.3478261 77.2608696 69.5652174 59.1304348 69.5652174 20.8695652 34.7826087 0 0 20.8695652 0 59.1304348 30.2173913 77.2608696 30.2173913 47.173913 20.8695652 52.173913 16.9565217 43.0434783 30.2173913 35.8695652 13.0434783 35.8695652 9.34782609 26.7391304 60.2173913 26.7391304 56.3043478 35.8695652 39.3478261 35.8695652 52.6086957 43.0434783 48.6956522 52.173913 39.3478261 47.173913 39.3478261 77.2608696"></polygon>
+        </g>
+    </g>
+</svg>

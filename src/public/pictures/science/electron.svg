@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-Copy">
+            <circle id="Oval" fill="#62C4E1" cx="40" cy="40" r="40"></circle>
+            <circle id="Oval-Copy" fill="#98E4FB" cx="40" cy="40" r="36"></circle>
+            <polygon id="-" fill="#62C4E1" points="33.3333333 42 46.6666667 42 46.6666667 38 33.3333333 38"></polygon>
+        </g>
+    </g>
+</svg>
