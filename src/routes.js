@@ -3,10 +3,13 @@ import Admin from './components/pages/Admin'
 import Landing from './components/pages/Landing'
 import Login from './components/pages/Login'
 import Experiment from './components/pages/Experiment'
+import Lessons from './components/pages/Lessons'
 
 const allRoutes = [
   {path: '/', component: Landing},
   {path: '/e', component: Experiment},
+  {path: '/admin', component: Admin},
+  {path: '/lesson', component: Lessons}
 ]
 
 export default function (user) {
@@ -16,7 +19,6 @@ export default function (user) {
     getChildRoutes (_, cb) {
       if (user) {
         cb(null, [
-          {path: '/admin', component: Admin},
           ...allRoutes
         ])
       } else {

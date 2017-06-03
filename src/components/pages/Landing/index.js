@@ -2,6 +2,7 @@ import React from 'react'
 import DocumentTitle from 'react-document-title'
 import styled from 'styled-components'
 import { observer } from 'mobx-react'
+import { Link } from 'react-router'
 
 import { colors, type } from '../../../utils/style'
 import Page from '../'
@@ -19,7 +20,7 @@ class Landing extends Page {
     return (
       <DocumentTitle title="TeachOK | Learn something new">
         <Wrapper>
-          hello
+          <Link to="/lesson">Start Lesson</Link>
         </Wrapper>
       </DocumentTitle>
     )

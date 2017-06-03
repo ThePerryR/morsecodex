@@ -195,7 +195,8 @@ class App extends Component {
         }
       }, dotDuration * 3)
       const sendWord = setTimeout(() => {
-        console.log(convertToString([[...tempWord, tempCharacter]]), '<------')
+        const word = convertToString([[...tempWord, tempCharacter]])
+        this.props.store.AppStore
         this.setState({tempWord: [], tempCharacter: ''})
       }, dotDuration * 7)
       this.setState({

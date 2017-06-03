@@ -14,7 +14,6 @@ class AppStore {
   @observable currentUserId = null
 
   constructor (initialData = {}, blueprints = {}, TransportLayer) {
-    console.log('yyyy', blueprints)
     this.csrf = initialData.csrf
     this.userHash = initialData.user_hash
     this.currentUserId = initialData.currentUserId && initialData.currentUserId.toString()
@@ -42,6 +41,10 @@ class AppStore {
     this.blueprints = {...this.blueprints, [window.location.pathname]: blueprint}
     resolve()
   })
+
+  sendWord = (word) => {
+    console.log(word, 'yyy')
+  }
 
   get currentUser () {
     if (!this._currentUser) {
