@@ -45,6 +45,7 @@ const ButtonSection = styled.div`
   background: #E6F1FF;
   user-select: none;
   cursor: pointer;
+  flex-shrink: 0;
 `
 
 const Button = styled.div`
@@ -66,6 +67,30 @@ const Button = styled.div`
 const Footer = styled.div`
   display: flex;
   margin-top: 12px;
+  flex-shrink: 0;
+`
+
+const MessageList = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+`
+
+const Message = styled.div`
+  padding: 4px 10px; 
+  border-radius: 12px;
+  background: ${colors.primary};
+  color: white;
+  margin-bottom: 6px;
+  ${props => props.temp && `
+    background: ${colors.background};
+    color: ${colors.grey};
+  `}
 `
 
 @observer
@@ -78,7 +103,8 @@ class App extends Component {
       tempMessage: [],
       tempWord: [],
       tempCharacter: '',
-      correctCount: 0
+      correctCount: 0,
+      messages: []
     }
 
     this.handlePress = this.handlePress.bind(this)
@@ -136,7 +162,22 @@ class App extends Component {
     return (
       <Wrapper>
         <SideBar>
-          <div style={{flex: 1}}/>
+          <MessageList>
+            {this.state.messages.map((message, i) => (
+              <Message key={i}>
+                <type.note>{message}</type.note>
+              </Message>
+            ))}
+            {(!!this.state.tempWord.length || this.state.tempCharacter) &&
+            <Message temp>
+              <type.note>
+                {this.state.tempWord && convertToString([this.state.tempWord])}
+                {!!this.state.tempWord.length && this.state.tempCharacter && ' '}
+                <span style={{opacity: 0.54}}>{this.state.tempCharacter}</span>
+              </type.note>
+            </Message>
+            }
+          </MessageList>
           <ButtonSection
             onMouseDown={this.handlePress}
             onMouseUp={this.handleRelease}
@@ -196,7 +237,8 @@ class App extends Component {
       }, dotDuration * 3)
       const sendWord = setTimeout(() => {
         const word = convertToString([[...tempWord, tempCharacter]])
-        this.props.store.AppStore
+        this.setState({messages: [...this.state.messages, word]})
+        this.props.store.sendWord(word)
         this.setState({tempWord: [], tempCharacter: ''})
       }, dotDuration * 7)
       this.setState({
